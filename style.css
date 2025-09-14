@@ -1,0 +1,217 @@
+    /* It's recommended to choose only 1-2 fonts for better performance */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Plus+Jakarta+Sans:wght@500&display=swap');
+
+    /* Define CSS variables here for colors */
+    :root {
+        --primary-color: #000000; /* Defining the black color for the button */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f4f4f4;
+    }
+
+    .main-header {
+        /* background: #ff0000; TEMPORARY DARK BACKGROUND */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px; /* Adjusted padding for better spacing */
+        height: 90px; /* Using a fixed height is more reliable than a percentage */
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        font-family: 'Playfair Display', serif;
+        text-decoration: none;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+    }
+
+    /* This new class groups the nav links and button */
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 40px; /* Space between the links and the button */
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 80px; /* Space between each navigation link */
+    }
+
+    .nav-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+  
+
+    .cta-button {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        padding: 10px 25px;
+        border: 1px solid var(--primary-color);
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Optional: Add a hover effect for the button */
+    .cta-button:hover {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+
+
+
+    /* --- Hero Section Styles --- */
+
+.hero-section {
+    /* Sizing and Background */
+    height: 100vh; /* This makes the section cover the full screen height */
+    background-image: url('/src/Photos/hero_page.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    
+    /* Flexbox for Centering Content */
+    display: flex;
+    justify-content: flex-start; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    
+    /* Adds a dark overlay for better text readability */
+    position: relative; 
+    margin: 5.5rem 0;
+}
+
+/* This creates the dark overlay effect */
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /*Black with 50% opacity*/
+    z-index: 1;
+}
+
+.hero-content {
+    /* Positioning and Sizing */
+    position: relative; /* Ensures content appears above the overlay */
+    z-index: 2;
+    max-width: 800px; /* Limits the width of the text for readability */
+    
+    /* Text Styling */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 0 20px; /* Adds some space on the sides for smaller screens */
+}
+
+.hero-content h1 {
+    font-family: 'AtacamaTrial', serif;
+    font-size: 5rem; /* Large font size for the main headline */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6; /* Improves readability of the paragraph */
+    /* margin-bottom: 30px;  */
+   margin:0 65px 30px 86px;
+}
+
+.hero-button {
+    /* Button Styling */
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px); /* Lifts the button slightly on hover */
+}
+
+
+/* --- Features Section (Stop Searching, Start Building) --- */
+.features-section {
+    background-color: var(--light-section-bg);
+    padding: 80px 0; /* Vertical padding */
+    text-align: center;
+}
+
+.features-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.features-section .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: #666;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Space between feature items */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-top: 40px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 280px; /* Fixed width for better layout control */
+    padding: 20px;
+}
+
+.feature-item .icon {
+    font-size: 3.5rem; /* Larger icons */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-item span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+
+
